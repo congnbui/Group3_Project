@@ -32,7 +32,7 @@ with open("alice_words.txt","w") as f:
     for word, number in alice_items:
         f.write(word + " "*(x-len(word)-len(str(number))) + str(number) + "\n")
 
-
+print("'alice' word appears {0} times in the story".format(alice_counts["alice"]))
     
 
 
