@@ -1,6 +1,6 @@
 from turtle import *
 
-colors = ["red", "blue", "brown", "yellow", "grey", "purple"]
+colors = ["red", "blue", "brown", "yellow", "grey", "purple", "cyan"]
 length = 100
 width = 65
 

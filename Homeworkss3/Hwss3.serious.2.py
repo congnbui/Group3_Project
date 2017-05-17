@@ -1,6 +1,6 @@
 flock = [5, 7, 300, 90, 24, 50, 75]
 default_size = 8
-months = 3
+months = 6
 price = 2
 
 print ("Hello, my name is Cong and these are my sheep sizes")
