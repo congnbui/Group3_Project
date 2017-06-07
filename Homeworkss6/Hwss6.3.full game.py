@@ -130,6 +130,8 @@ while True:
         else:
             print("You can't walk out of the map bro!!!")
 
+    print_map(size_x, size_y, pusher_x, pusher_y, boxes, dests)
+
     # check win/lose:
     check_win = 0
     for box in boxes:
@@ -139,6 +141,8 @@ while True:
         print("CONGRATULATIONS!! You Dit It!!!!!!!!!!!!")
         break
     check_lose = 0        
+    i = 0
+    j = 0
     for box in boxes:
         if check_onvertex(size_x, size_y, box["x"], box["y"]):
             check_lose += 1
@@ -146,12 +150,19 @@ while True:
             check_lose += 1
         elif box["y"] * (box["y"] - size_y + 1) == 0 and check_samerow(box["y"], dests) == False:
             check_lose += 1
-    if check_lose > 0:
-        print_map(size_x, size_y, pusher_x, pusher_y, boxes, dests)
+##        elif box["x"] * (box["x"] - size_x + 1) * box["y"] * (box["y"] - size_y + 1) != 0:
+##            pass
+##        else:
+##            if box["x"] == 0:
+##                i += 1
+##                for dest in dests:
+##                    if dest["x"] == box ["x"] == 0 or dest["x"] == box ["x"] == size_x - 1 or dest["y"] == box ["y"] == 0 or dest["y"] == box ["y"] == size_y - 1 :
+##                    j += 1
+    if check_lose > 0 or i > j :
         print("You Lose Bro :( Better Luck Next Time!")
         break 
             
-    print_map(size_x, size_y, pusher_x, pusher_y, boxes, dests)
+    
 
 
         
